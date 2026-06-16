@@ -92,11 +92,13 @@ Sign up for these five with the same email. Save every password in a password ma
 
 ---
 
-## Part 2 · Install the tools (Mac)
+## Part 2 · Install the tools
+
+### macOS
 
 Four installs. For the first one you'll use the built-in Terminal app — press <kbd>⌘</kbd> <kbd>Space</kbd>, type Terminal, hit Return. After you install VS Code (step 4), you'll do everything from its built-in terminal instead — that's where you'll live from then on. Copy each block below, paste it in, press Return, and wait for it to finish before the next.
 
-### Install 1 — Homebrew
+#### Install 1 — Homebrew
 
 **Free**
 
@@ -111,7 +113,7 @@ The installer that puts the other tools on your Mac. Paste this, press Return, e
 
 ---
 
-### Install 2 — Node.js
+#### Install 2 — Node.js
 
 **Free**
 
@@ -126,7 +128,7 @@ brew install node git
 
 ---
 
-### Install 3 — Claude Code
+#### Install 3 — Claude Code
 
 **The tool itself**
 
@@ -141,7 +143,7 @@ npm install -g @anthropic-ai/claude-code
 
 ---
 
-### Install 4 — VS Code
+#### Install 4 — VS Code
 
 **Free**
 
@@ -152,6 +154,72 @@ Your workbench — a free editor from Microsoft with a terminal built in. This i
 3. Open terminal with <kbd>Ctrl</kbd> <kbd>`</kbd> or Terminal → New Terminal
 
 **Why over plain Terminal:** You see your files, your code, and the Claude conversation side by side — far less intimidating than a bare terminal window. Everything in Part 3 happens in VS Code's terminal.
+
+---
+
+### Windows
+
+Four installs. For the first one you'll use Windows Terminal (the modern Windows command line). Open the Start menu, type "Terminal", and hit Return. After you install VS Code (step 4), you'll do everything from its built-in terminal instead — that's where you'll live from then on. Copy each block below, paste it in, press Return, and wait for it to finish before the next.
+
+#### Install 1 — Scoop
+
+**Free**
+
+The installer that puts the other tools on your Windows PC. Paste this into Windows Terminal and press Return.
+
+```powershell
+iwr -useb get.scoop.sh | iex
+```
+
+> [!NOTE]
+> If you see an error about execution policy, run this first:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+> Then run the Scoop install command again.
+
+---
+
+#### Install 2 — Node.js
+
+**Free**
+
+The engine modern web apps run on. Claude needs it to build and preview your app.
+
+```powershell
+scoop install node git
+```
+
+> [!NOTE]
+> This also installs Git, the tool that talks to your GitHub account.
+
+---
+
+#### Install 3 — Claude Code
+
+**The tool itself**
+
+Claude, living in your terminal — it reads, writes, and runs the project for you.
+
+```powershell
+npm install -g @anthropic-ai/claude-code
+```
+
+> [!NOTE]
+> The `-g` means 'everywhere on this PC,' so you can start Claude from any folder.
+
+---
+
+#### Install 4 — VS Code
+
+**Free**
+
+Your workbench — a free editor from Microsoft with a terminal built in. This is where you'll see the project files and talk to Claude, all in one window.
+
+1. Download from [code.visualstudio.com](https://code.visualstudio.com) and run the installer
+2. Open VS Code and run `Terminal: Create New Terminal` via <kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>`</kbd>
+
+**Why over plain PowerShell:** You see your files, your code, and the Claude conversation side by side — far less intimidating than a bare terminal window. Everything in Part 3 happens in VS Code's terminal.
 
 ---
 
